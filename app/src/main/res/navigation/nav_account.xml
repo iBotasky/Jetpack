@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_account"
+    app:startDestination="@id/signIn">
+    <fragment
+        android:id="@+id/signIn"
+        android:name="su.learn.jetpack.ui.account.SignInFragment"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/signInToSignUp"
+            app:destination="@id/signUp" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUp"
+        android:name="su.learn.jetpack.ui.account.SignUpFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/signUpToSignIn"
+            app:destination="@+id/signIn" />
+    </fragment>
+</navigation>
